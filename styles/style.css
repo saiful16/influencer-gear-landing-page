@@ -6,10 +6,9 @@
 }
 
 header,
-body {
+main {
     max-width: 1280px;
     margin: 0 auto;
-    /* background: rgb(170, 170, 170); */
 }
 
 .btn-primary {
@@ -96,12 +95,107 @@ hr {
     background: linear-gradient(135.00deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.378%, rgba(192, 204, 218, 0.1) 100%);
 }
 
+/* cards section styles start from here */
+.title-card-section {
+    color: rgb(58, 58, 58);
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    background: rgb(255, 255, 255);
+}
+
+.card>img {
+    width: 100%;
+}
+
+.card>h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.card>h5 {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.card>p {
+    color: rgb(120, 120, 133);
+    font-family: Inter;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.btn-see-more {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 50px;
+    text-align: right;
+    margin-bottom: 100px;
+}
+
+.btn-see-more>a {
+    color: rgba(224, 44, 109, 0.87);
+}
+
+/* feature section container */
+.feature-section-container {
+    display: flex;
+    gap: 96px;
+    margin-bottom: 100px;
+}
+
+.title-feature {
+    color: rgb(10, 8, 38);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.feature-description {
+    color: rgb(108, 108, 108);
+    font-size: 1rem;
+    font-weight: 700;
+    max-width: 500px;
+    margin-bottom: 16px;
+}
+
+/* footer section  */
+footer {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    background: rgb(1, 22, 84);
+    color: white;
+    padding: 50px;
+}
+
+.social {
+    margin-right: 10px;
+}
 
 
 
 /* responsive design for small devices */
 @media screen and (max-width: 576px) {
-    .nav-container {
+
+    .nav-container,
+    .feature-section-container {
         flex-direction: column;
         /* justify-content: center;
         align-items: center; */
@@ -112,15 +206,31 @@ hr {
         justify-content: center;
         align-items: center;
     }
-    .banner-content{
+
+    .banner-content {
         text-align: center;
     }
-    hr{
+
+    hr {
         visibility: hidden;
     }
-    .partner-containers{
+
+    .partner-containers {
         flex-wrap: wrap;
         gap: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-section-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature-content {
+        text-align: center;
     }
 
 }
@@ -128,21 +238,39 @@ hr {
 
 /* responsive design for medium size devices */
 @media screen and (min-width: 576px) and (max-width:992px) {
-    .nav-container {
+
+    .nav-container,
+    .feature-section-container {
         flex-direction: column;
         /* justify-content: center;
         align-items: center; */
     }
+
     .banner-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 50px;
     }
-    .banner-content{
+
+    .banner-content {
         text-align: center;
     }
-    .partner-containers{
+
+    .partner-containers {
         flex-wrap: wrap;
         gap: 50px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-section-container {
+        text-align: center;
+    }
+    .feature-description {
+        max-width: auto;
+        margin: 0 auto 30px;
     }
 }
