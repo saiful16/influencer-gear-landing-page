@@ -1,0 +1,148 @@
+/* shared styles */
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header,
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* background: rgb(170, 170, 170); */
+}
+
+.btn-primary {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 24px 10px 24px;
+    border-radius: 41px;
+    border: none;
+    background: rgb(224, 44, 109);
+}
+
+/* nav styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.nav-container ul,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-title {
+    color: rgb(58, 58, 58);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+
+.anchor-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* banner section style here */
+.banner-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.banner-content {
+    max-width: 582px;
+}
+
+.banner-title {
+    color: rgb(58, 58, 58);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.banner-description {
+    color: rgb(58, 58, 58);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.banner-img {
+    background: url(../images/Circle\ design.svg);
+    background-repeat: no-repeat;
+}
+
+.banner-img img {
+    width: 440px;
+    height: 414px;
+}
+
+.partner-containers {
+    display: flex;
+    max-width: 1110px;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+hr {
+    background: linear-gradient(135.00deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.378%, rgba(192, 204, 218, 0.1) 100%);
+}
+
+
+
+
+/* responsive design for small devices */
+@media screen and (max-width: 576px) {
+    .nav-container {
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .banner-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-content{
+        text-align: center;
+    }
+    hr{
+        visibility: hidden;
+    }
+    .partner-containers{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+}
+
+
+/* responsive design for medium size devices */
+@media screen and (min-width: 576px) and (max-width:992px) {
+    .nav-container {
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .banner-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-content{
+        text-align: center;
+    }
+    .partner-containers{
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
