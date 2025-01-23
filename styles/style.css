@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* shared styles */
 .poppins-regular {
     font-family: "Poppins", serif;
@@ -66,16 +72,21 @@ a {
 .banner-img {
     background: url(../images/Circle\ design.svg);
     background-repeat: no-repeat;
+    background-size: contain;
+    
 }
 .banner-img img {
-    width: 440px;
+    width: 100%;
     height: 414px;
+    /* padding: 20px; */
 }
 .partner-containers {
     display: flex;
-    max-width: 1110px;
+    max-width: 1280px;
     justify-content: space-between;
+    align-items: center;
     padding: 45px;
+    margin: 0 auto;
 }
 hr {
     background: linear-gradient(135.00deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.378%, rgba(192, 204, 218, 0.1) 100%);
@@ -176,9 +187,13 @@ footer {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-    }
+        padding: 20px;    }
     .banner-content {
         text-align: center;
+        /* max-width: auto; */
+    }
+    .banner-img img{
+        width: 95%;
     }
     hr {
         visibility: hidden;
@@ -186,6 +201,8 @@ footer {
     .partner-containers {
         flex-wrap: wrap;
         gap: 30px;
+        justify-content: center;
+        align-items: center;
     }
     .card-container {
         grid-template-columns: repeat(1, 1fr);
@@ -222,6 +239,8 @@ footer {
     .partner-containers {
         flex-wrap: wrap;
         gap: 50px;
+        justify-content: center;
+        align-items: center;
     }
     .card-container {
         grid-template-columns: repeat(2, 1fr);
